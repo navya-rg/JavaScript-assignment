@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<head>
+	<title>Job application</title>
+	<style type="text/css">
+		body{
+			font-family: Verdana;
+			background-color: rgba(209, 239, 243, 1);
+		}
+		#FORM{
+			width: 80%;
+			margin: auto;
+			font-size: 1.2em;
+		}
+		#textarea{
+			margin-left: 10%;
+		}
+	</style>
+</head>
+<body>
+	<center><u><h1>Job Application</h1></u></center><br>
+	<div id="textarea">
+	<div id="FORM">
+	<form name="myForm">
+		<label for="fname">First name:</label>
+		<input type="text" name="fname" id="fname" required>
+		<label for="mname">Middle name:</label>
+		<input type="text" name="mname">
+		<label for="lname">Last name:</label>
+		<input type="text" name="lname" required><br><br>
+
+		<label for="dob">Date of Birth:</label>
+		<input type="date" name="dob"  required><br><br>
+
+		<label for="position">Position applied for:</label>
+		<select name="position" required>
+			<option value=""></option>
+			<option value="Front-end developer">Front-end developer</option>
+			<option value="Back-end developer">Back-end developer</option>
+			<option value="Java Developer">Java Developer</option>
+			<option value="Full stack developer">Full stack developer</option>
+			<option value="Database support">Database support</option>
+			<option value="Tester">Tester</option>
+			<option value="Quality assurance">Quality assurance</option>
+			<option value="IT administrator">IT administrator</option>
+		</select>
+		<label for="startdate">Date availabale to start:</label>
+		<input type="date" name="startdate" required><br><br>
+
+		<label for="type">Type of employment desired:</label>
+		<input type="radio" name="type" value="Full time" checked>Full Time
+		<input type="radio" name="type" value="Part time">Part Time
+		<input type="radio" name="type" value="Seasonal">Seasonal
+		<input type="radio" name="type" value="Temporary">Temporary<br><br>
+		<label for="exp">Experience of years:</label>
+		<input type="number" name="exp" min="0" step="0.1"  required><br><br>
+		<u>Previous employment:</u><br>
+		<label for="role1">Role:</label><input type="text" name="role1">
+		<label for="tp1">Time period:</label><input type="number" name="tp1" min="0" step="0.1">
+		<label for="employer1">Employer:</label><input type="text" name="employer1"><br>
+		<label for="role2">Role:</label><input type="text" name="role2">
+		<label for="tp2">Time period:</label><input type="number" name="tp2" min="0" step="0.1">
+		<label for="employer2">Employer:</label><input type="text" name="employer2"><br>
+		<label for="role3">Role:</label><input type="text" name="role3">
+		<label for="tp3">Time period:</label><input type="number" name="tp3" min="0" step="0.1">
+		<label for="employer3">Employer:</label><input type="text" name="employer3"><br><br>
+
+		<label for="resadd">Residential address:</label>
+		<textarea type="address" name="resadd" cols="67" rows="2"  required></textarea><br><br>
+		<label for="peradd">Permanent address:</label>
+		<textarea type="address" name="peradd" cols="67" rows="2"  required></textarea><br><br>
+		<label for="contact">Contact number:</label>
+		<input type="tel" name="contact" required><br><br>
+		<label for="email">Email:</label>
+		<input type="email" name="email" required><br><br>
+		<u>Educational qualificatons:</u><br>
+		Post-graduate:<br>
+		<label for="pginst">Institution:</label><input type="text" name="pginst">
+		<label for="pgyear">Year of graduation:</label><input type="year" name="pgyear">
+		<label for="pgperc">Percentage obtained:</label><input type="Percentage" name="pgperc"><br>
+		Under-graduate:<br>
+		<label for="uginst">Institution:</label><input type="text" name="uginst" required>
+		<label for="ugyear">Year of graduation:</label><input type="year" name="ugyear" required>
+		<label for="ugperc">Percentage obtained:</label><input type="Percentage" name="ugperc" required><br>
+		High School:<br>
+		<label for="hsinst">Institution:</label><input type="text" name="hsinst" required>
+		<label for="hsyear">Year of graduation:</label><input type="year" name="hsyear" required>
+		<label for="hsperc">Percentage obtained:</label><input type="Percentage" name="hsperc" required><br>
+		Other:<br>
+		<label for="oinst">Institution:</label><input type="text" name="oinst">
+		<label for="oyear">Year of graduation:</label><input type="year" name="oyear">
+		<label for="operc">Percentage obtained:</label><input type="Percentage" name="operc"><br><br>
+		<u>Skill set:</u><br>
+		<label for="skill1">Skill:</label>
+		<input type="text" name="skill1" required>
+		<label for="proficiency1">Level of Proficiency:</label>
+		<select name="proficiency1" required>
+			<option value=""></option>
+			<option value="Beginner">Beginner</option>
+			<option value="Intermediate">Intermediate</option>
+			<option value="Advanced">Advanced</option>
+		</select><br>
+		<label for="skill2">Skill:</label>
+		<input type="text" name="skill2">
+		<label for="proficiency2">Level of Proficiency:</label>
+		<select name="proficiency2">
+			<option value=""></option>
+			<option value="Beginner">Beginner</option>
+			<option value="Intermediate">Intermediate</option>
+			<option value="Advanced">Advanced</option>
+		</select><br>
+		<label for="skill3">Skill:</label>
+		<input type="text" name="skill3">
+		<label for="proficiency3">Level of Proficiency:</label>
+		<select name="proficiency3">
+			<option value=""></option>
+			<option value="Beginner">Beginner</option>
+			<option value="Intermediate">Intermediate</option>
+			<option value="Advanced">Advanced</option>
+		</select><br><br>
+		<label for="resume">Upload your resume:</label>
+		<input type="file" name="resume"  required><br>
+		<input type="checkbox" name="details" checked>I assure that the details mentioned in this form are true to the best of my knowledge.<br>
+		<input type="checkbox" name="agree" checked>I agree to the terms and conditions.<br>
+		<input type="submit" name="Submit" onclick="display(); return false;"><br><br>
+	</form>
+	</div>
+	</div>
+	<script type="text/javascript">
+		function display(){
+			var obj = {};
+			obj.First_Name = document.myForm.fname.value;
+			obj.Middle_Name = document.myForm.mname.value;
+			obj.Last_Name = document.myForm.lname.value;
+			obj.Date_of_Birth = document.myForm.dob.value;
+			obj.Applied_Position = document.myForm.position.value;
+			obj.Tentative_Start_Date = document.myForm.startdate.value;
+			obj.Type_of_Employment = document.myForm.type.value;
+			obj.Experience = document.myForm.exp.value;
+
+			obj.Role1 = document.myForm.role1.value;
+			obj.Time_Period1 = document.myForm.tp1.value;
+			obj.Employer1 = document.myForm.employer1.value;
+			obj.Role2 = document.myForm.role2.value;
+			obj.Time_Period2 = document.myForm.tp2.value;
+			obj.Employer2 = document.myForm.employer2.value;
+			obj.Role3 = document.myForm.role3.value;
+			obj.Time_Period3 = document.myForm.tp3.value;
+			obj.Employer3 = document.myForm.employer3.value;
+
+			obj.Residential_Address = document.myForm.resadd.value;
+			obj.Permanent_Address = document.myForm.peradd.value;
+			obj.Contact = document.myForm.contact.value;
+			obj.Email = document.myForm.email.value;
+
+			obj.Post_Graduate_Institue = document.myForm.pginst.value;
+			obj.PG_Year = document.myForm.pgyear.value;
+			obj.PG_Percentage = document.myForm.pgperc.value;
+			obj.Under_Graduate_Institue = document.myForm.uginst.value;
+			obj.UG_ear = document.myForm.ugyear.value;
+			obj.UG_Percentage = document.myForm.ugperc.value;
+			obj.HighSchool_Institute = document.myForm.hsinst.value;
+			obj.HS_Year = document.myForm.hsyear.value;
+			obj.HS_Percentage = document.myForm.hsperc.value;
+			obj.Other_Institute = document.myForm.oinst.value;
+			obj.Other_Year = document.myForm.oyear.value;
+			obj.Other_Percentage = document.myForm.operc.value;
+
+			obj.Skill1 = document.myForm.skill1.value;
+			obj.Proficiency1 = document.myForm.proficiency1.value;
+			obj.Skill2 = document.myForm.skill2.value;
+			obj.Proficiency2 = document.myForm.proficiency2.value;
+			obj.Skill3 = document.myForm.skill3.value;
+			obj.Proficiency3 = document.myForm.proficiency3.value;
+
+			obj.Resume = document.myForm.resume.value;
+
+			var toPrint=" ";
+			for(x in obj){
+				if(obj[x]){
+					toPrint+="<b>"+x+": </b>"+obj[x]+"<br>";
+				}
+			}
+			document.getElementById("textarea").innerHTML = toPrint;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+	<title>CSS animation using forms</title>
+
+	<style type="text/css">
+		body{
+			font-family: Verdana;
+			background-color: rgba(209, 239, 243, 1);
+		}
+		#FORM{
+			text-align: center;
+			margin: auto;
+			font-size: 1.2em;
+		}
+		#ani{
+			width: 100px;
+			height: 100px;
+			margin-left: 33%;
+			background-color: black;
+			border: 2px solid black;
+			border-radius: 50%;
+			animation-name: anima;
+			animation-duration: 4s;
+			position: relative;
+		}
+		@keyframes anima{
+			0%   {background-color:purple; left:0px; top:0px;}
+  			25%  {background-color:blue; left:100px; top:100px;}
+  			50%  {background-color:pink; left:200px; top:0px;}
+  			75%  {background-color:white; left:300px; top:100px;}
+  			100% {background-color:gray; left:400px; top:0px;}
+		}
+	</style>
+</head>
+<body>
+	<center><u><h1>CSS Animation</h1></u></center><br>
+	<div id="ani">
+	</div>
+
+	<br><br>
+
+	<div id="FORM">
+	<form name="myForm">
+		<label for="animation_duration">animation-duration</label>
+		<input type="number" name="animation_duration" min="0" max="5" step="1" required><br><br>
+
+		<label for="animation_timing_function">animation-timing-function</label>
+		<select name="animation_timing_function" required>
+			<option value=""></option>
+			<option value="ease">ease</option>
+			<option value="linear">linear</option>
+			<option value="ease-in">ease-in</option>
+			<option value="ease-out">ease-out</option>
+			<option value="ease-in-out">ease-in-out</option>
+		</select><br><br>
+
+		<label for="animation_delay">animation-delay</label>
+		<input type="number" name="animation_delay" min="-5" max="5" step="1" required><br><br>
+
+		<label for="animation_iteration_count">animation-iteration-count</label>
+		<select name="animation_iteration_count"  required>
+			<option value=""></option>
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="infinite">infinite</option>
+		</select><br><br>
+
+		<label for="animation_direction">animation-direction</label>
+		<select name="animation_direction" required>
+			<option value=""></option>
+			<option value="normal">normal</option>
+			<option value="reverse">reverse</option>
+			<option value="alternate">alternate</option>
+			<option value="alternate-reverse">alternate-reverse</option>
+		</select><br><br>	
+
+		<label for="animation_fill_mode">animation-fill-mode</label>
+		<select name="animation_fill_mode" required>
+			<option value=""></option>
+			<option value="none">none</option>
+			<option value="forwards">forwards</option>
+			<option value="backwards">backwards</option>
+			<option value="both">both</option>
+		</select><br><br>
+
+		<label for="animation_play_state">animation-play-state</label>
+		<select name="animation_play_state" required>
+			<option value=""></option>
+			<option value="running">running</option>
+			<option value="paused">paused</option>
+		</select><br><br>
+
+		<input type="submit" name="Try it" onclick="anim(); return false;">
+	</form>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+
+		function anim(){
+
+			var delay = document.myForm.animation_delay.value;
+			var count = document.myForm.animation_iteration_count.value;
+			var direction = document.myForm.animation_direction.value;
+			var timing = document.myForm.animation_timing_function.value;
+			var fillmode = document.myForm.animation_fill_mode.value;
+			var duration = document.myForm.animation_duration.value;
+			var playstate = document.myForm.animation_play_state.value;
+
+			var a="anima ";
+			console.log("inside animate function");
+			if (duration)
+				a+=duration+"s "
+			if (timing)
+				a+=timing+" "
+			if (delay)
+				a+=delay+"s "
+			if (count)
+				a+=count+" "
+			if (direction)
+				a+=direction+" "
+			if (fillmode)
+				a+=fillmode+" "
+			if (playstate)
+				a+=playstate
+			console.log(a);
+			document.getElementById("ani").style.animation = a;
+		}
+	</script>
+</body>
+</html>

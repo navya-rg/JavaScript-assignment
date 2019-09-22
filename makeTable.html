@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<title>Search a date within a string</title>
+	<style type="text/css">
+		body{
+			font-family: Verdana;
+			background-color: rgba(209, 239, 243, 1);
+			text-align: center;
+		}
+		table{
+			margin: auto;
+			border-collapse: collapse;
+		}
+		td{
+			padding: 10px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>Create table</h1>
+	<div id="tab">
+	</div>
+
+	<script type="text/javascript">
+		var rows = prompt('Enter number of rows', 0);
+		var cols = prompt('Enter number of columns', 0);
+		var tab = "<table>";
+		for(var i=0; i<rows; i++){
+			tab+="<tr>";
+			for(var j=0; j<cols; j++){
+				tab+="<td>Row-"+i+" Column-"+j+"</td>"
+			}
+			tab+="</tr>";
+		}
+		tab+="</table>";
+		document.getElementById('tab').innerHTML = tab;
+	</script>
+</body>
+</html>
