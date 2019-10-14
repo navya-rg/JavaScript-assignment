@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Check if a date is a weekend</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function isSatSun(dt){	     
+	    	if(dt.getDay() == 0 || dt.getDay() == 6)
+	        	document.write(dt+" <span style='color:red;'>is a weekend</span><br><br>"); 
+	        else
+	        	document.write(dt+" <span style='color:red;'>is not a weekend</span><br><br>");
+		}
+
+		isSatSun(new Date());
+		isSatSun(new Date(2019, 9, 11));
+		isSatSun(new Date(2019, 9, 12));
+		isSatSun(new Date(2019, 9, 13));
+	</script>
+</body>
+</html>

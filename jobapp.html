@@ -22,11 +22,11 @@
 	<div id="FORM">
 	<form name="myForm">
 		<label for="fname">First name:</label>
-		<input type="text" name="fname" id="fname" required>
+		<input type="text" name="fname" id="fname" pattern="[A-Za-z0-9!#$%&’*+-/=?^_`{|}~](\.*[A-Za-z0-9!#$%&’*+-/=?^_`{|}~])*" required>
 		<label for="mname">Middle name:</label>
-		<input type="text" name="mname">
+		<input type="text" name="mname" pattern="[A-Za-z0-9!#$%&’*+-/=?^_`{|}~](\.*[A-Za-z0-9!#$%&’*+-/=?^_`{|}~])*" >
 		<label for="lname">Last name:</label>
-		<input type="text" name="lname" required><br><br>
+		<input type="text" name="lname" pattern="[A-Za-z0-9!#$%&’*+-/=?^_`{|}~](\.*[A-Za-z0-9!#$%&’*+-/=?^_`{|}~])*" required><br><br>
 
 		<label for="dob">Date of Birth:</label>
 		<input type="date" name="dob"  required><br><br>
@@ -65,13 +65,13 @@
 		<label for="employer3">Employer:</label><input type="text" name="employer3"><br><br>
 
 		<label for="resadd">Residential address:</label>
-		<textarea type="address" name="resadd" cols="67" rows="2"  required></textarea><br><br>
+		<textarea type="address" name="resadd" cols="67" rows="2"  pattern="[A-Za-z0-9!#$%&’*+-/=?^_`{|}~](\.*[A-Za-z0-9!#$%&’*+-/=?^_`{|}~])*" required></textarea><br><br>
 		<label for="peradd">Permanent address:</label>
-		<textarea type="address" name="peradd" cols="67" rows="2"  required></textarea><br><br>
+		<textarea type="address" name="peradd" cols="67" rows="2"  pattern="[A-Za-z0-9!#$%&’*+-/=?^_`{|}~](\.*[A-Za-z0-9!#$%&’*+-/=?^_`{|}~])*" required></textarea><br><br>
 		<label for="contact">Contact number:</label>
-		<input type="tel" name="contact" required><br><br>
+		<input type="tel" name="contact" patter="(+91)?[798][0-9]{9}" required><br><br>
 		<label for="email">Email:</label>
-		<input type="email" name="email" required><br><br>
+		<input type="email" name="email" pattern="[A-Z0-9a-z._]+@[A-Za-z0-9._]+\\.[A-Za-z]+" required><br><br>
 		<u>Educational qualificatons:</u><br>
 		Post-graduate:<br>
 		<label for="pginst">Institution:</label><input type="text" name="pginst">

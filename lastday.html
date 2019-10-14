@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Last day of the month</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function lastDay(dt){
+			document.write('<br>'+dt);
+			var month = dt.getMonth();
+			var year = dt.getYear();
+			var lastD = new Date(year, month+1, 0);
+			document.write('<br>Last date: '+lastD);
+			document.write('<br>Last date: <span style="color:red;">'+lastD.getDate()+'</span><br>');
+		}
+		lastDay(new Date());
+		lastDay(new Date(2019, 1));
+		lastDay(new Date(2019, 2));
+		lastDay(new Date(2019, 3));
+	</script>
+</body>
+</html>

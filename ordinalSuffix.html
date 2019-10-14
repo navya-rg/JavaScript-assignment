@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>English Ordinal Suffix of the Day of the Month</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function suffix(dt)
+		  {
+		    document.write('<br>'+dt);
+		    var result;
+		    var date = dt.getDate();
+		    
+		    if(date % 10 == 1 && date != 11 )
+		    	result = 'st';
+		    else if(date % 10 == 2 && date != 12)
+		    	result = 'nd';
+		    else if(date % 10 == 3 && date != 13)
+		    	result = 'rd';
+		    else
+		    	result = 'th';
+
+		   document.write('<br>English ordinal suffix: <span style="color:red;">'+date+result+'</span><br>');
+		  }
+
+		suffix(new Date());
+		suffix(new Date(2019, 9, 1));
+		suffix(new Date(2019, 9, 2));
+		suffix(new Date(2019, 9, 3));
+		suffix(new Date(2019, 9, 11));
+		suffix(new Date(2019, 9, 12));
+		suffix(new Date(2019, 9, 13));
+		suffix(new Date(2019, 9, 4));
+	</script>
+</body>
+</html>
